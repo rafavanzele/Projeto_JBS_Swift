@@ -1,0 +1,98 @@
+/* PALETA: */
+:root {
+    --color1: #fff;
+    --color2: #000;
+    --color3: #dc4405;
+    --color4: #1e1e1e;
+    --color5: #484848;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    flex-wrap: wrap;
+    width: 100%;
+    background: url(img/fundo_tela.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-size: 0.9rem;
+}
+
+
+main #login {
+    width: 90%;
+    display: flex;
+    margin: 65px auto 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section#login  img {
+    width: 250px;
+    height: 250px; 
+}
+
+section#login #formulario input {
+    height: 60px;
+    width: 300px;
+    margin: 0.5rem;
+    border-radius: 10px;
+    border: none;
+}
+
+section#login input::placeholder {
+    text-align: left;
+    padding-left: 1rem;
+    opacity: 0.7;
+}
+
+.btn {
+    width: 60%;
+    display: flex;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    background-color: var(--color3);
+    border: 1px solid var(--color3);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+.btn:hover {
+    background-color: #a13202;
+    color: var(--color1);
+    transform: scale(1);
+    box-shadow: 5px 5px 10px var(--color2);
+}
+
+main p {
+    font-size: 1rem;
+    color: var(--color1);
+    text-align: center;
+    margin-bottom: 0rem;
+}
+
+main p a {
+    color: var(--color3);
+}
+
+
+
+
+
+
+
+
+/* QUERIES */
+@media screen and (min-width: 768px) {
+    body {
+        background-size: 100vh;
+        
+    }    
+}

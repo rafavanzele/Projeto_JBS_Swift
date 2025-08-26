@@ -7,6 +7,7 @@
     --color5: #484848;
 }
 
+/* RESET */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,7 +15,9 @@
     font-family: "Roboto", sans-serif;
 }
 
+/* TELA LOGIN */
 body {
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
     background: url(img/fundo_tela.jpeg);
@@ -22,21 +25,28 @@ body {
     background-position: center;
     height: 100vh;
     font-size: 0.9rem;
+    justify-content: center;
+    align-items: center;
 }
 
 
 main #login {
     width: 90%;
+    height: auto;
     display: flex;
-    margin: 65px auto 0;
+    flex-direction: column;
+    margin: 0 auto 0;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 section#login  img {
     width: 250px;
     height: 250px; 
+    margin-bottom: 1rem;
 }
+
 
 section#login #formulario input {
     height: 60px;
@@ -53,7 +63,7 @@ section#login input::placeholder {
 }
 
 .btn {
-    width: 60%;
+    width: 200px;
     display: flex;
     margin: 1rem auto;
     padding: 0.5rem 1rem;
@@ -62,6 +72,7 @@ section#login input::placeholder {
     color: #fff;
     cursor: pointer;
     border-radius: 2rem;
+    box-shadow: 2px 2px 5px var(--color2);
 }
 
 .btn:hover {
@@ -93,6 +104,9 @@ main p a {
 @media screen and (min-width: 768px) {
     body {
         background-size: 100vh;
-        
-    }    
+            
+    }
+
+    
+    
 }

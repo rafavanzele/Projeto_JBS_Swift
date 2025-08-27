@@ -20,7 +20,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    background: url(img/fundo_tela.jpeg);
+    background: url(../img/fundo_tela.jpeg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -41,9 +41,9 @@ main #login {
     align-items: center;
 }
 
-section#login  img {
+section#login img {
     width: 250px;
-    height: 250px; 
+    height: 250px;
     margin-bottom: 1rem;
 }
 
@@ -82,17 +82,66 @@ section#login input::placeholder {
     box-shadow: 5px 5px 10px var(--color2);
 }
 
-main p {
+p {
     font-size: 1rem;
     color: var(--color1);
     text-align: center;
     margin-bottom: 0rem;
 }
 
-main p a {
+a {
     color: var(--color3);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
 }
 
+
+
+
+/* PERFIL PAGE */
+.table-container {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--color1);
+    opacity: 0.9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.custom-table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.1rem 0.3rem;
+    font-size: 1rem;
+    border: none;
+}
+
+.custom-table tr:nth-child(odd) {
+    background-color: #ffffff25;
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: transparent;
+}
+
+.btn-voltar {
+    position: absolute;   /* fixa em relação ao body ou container pai */
+    top: 30px;            /* distância do topo */
+    left:30px;           /* distância da esquerda */
+    color: var(--color3);          /* muda a cor do ícone */
+    font-size: 30px;      /* aumenta/diminui o tamanho */
+    cursor: pointer;      /* deixa clicável */
+    z-index: 10;          /* garante que fique acima dos outros elementos */
+}
 
 
 
@@ -104,9 +153,9 @@ main p a {
 @media screen and (min-width: 768px) {
     body {
         background-size: 100vh;
-            
+
     }
 
-    
-    
+
+
 }

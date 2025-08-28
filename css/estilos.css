@@ -69,10 +69,10 @@ section#login input::placeholder {
     padding: 0.5rem 1rem;
     background-color: var(--color3);
     border: 1px solid var(--color3);
-    color: #fff;
+    color: var(--color1);
     cursor: pointer;
     border-radius: 2rem;
-    box-shadow: 2px 2px 5px var(--color2);
+    box-shadow: 2px 2px 10px var(--color2);
 }
 
 .btn:hover {
@@ -100,12 +100,48 @@ a {
 
 
 /* PERFIL PAGE */
+.info-perfil {
+    width: 100%;
+    position: relative;
+    padding-top: 180px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil-foto img {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 3px solid var(--color3);
+    box-shadow: 1px 1px 10px var(--color2);
+}
+
+.info-perfil .perfil-nome {
+    width: 10rem;
+    height: 2.5rem;
+    display: flex;
+    margin: auto;
+    font-size: 3rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color3);
+    border-radius: 2rem;
+    box-shadow: 1px 1px 10px var(--color2);
+}
+
 .table-container {
     width: 80%;
     height: 50%;
     display: flex;
     justify-content: center;
-    margin-top: 6rem;
+    margin: auto;
+
 }
 
 .custom-table {
@@ -134,14 +170,38 @@ a {
 }
 
 .btn-voltar {
-    position: absolute;   /* fixa em relação ao body ou container pai */
-    top: 30px;            /* distância do topo */
-    left:30px;           /* distância da esquerda */
-    color: var(--color3);          /* muda a cor do ícone */
-    font-size: 30px;      /* aumenta/diminui o tamanho */
-    cursor: pointer;      /* deixa clicável */
-    z-index: 10;          /* garante que fique acima dos outros elementos */
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: var(--color3);
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
 }
+
+
+
+/* FOOTER */
+.footer {
+    width: 80%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.footer span {
+    color: var(--color1);
+    font-size: 2rem;
+    justify-content: space-between;
+}
+
+.footer p {
+    font-size: 1rem;
+    justify-content: space-between;
+    text-align: center;
+    
+}
+
 
 
 
@@ -156,6 +216,15 @@ a {
 
     }
 
+    .info-perfil {
+        display: flex;
+        flex-direction: column;
+    }
 
+    .table-container, .footer {
+        max-width: 60%; 
+    }
+
+    
 
 }

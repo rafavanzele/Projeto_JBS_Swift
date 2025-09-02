@@ -202,8 +202,7 @@ a {
 }
 
 .footer span:hover {
-    transform: scale(1.2);
-    
+    transform: scale(1.2);    
 }
 
 
@@ -215,7 +214,8 @@ h2 {
     color: var(--color1);
     text-align: center;
     justify-content: center;
-    margin: 3rem auto 0 auto;    
+    margin: 3rem auto 0 auto;  
+      
 }
 
 .titulo-elipse {
@@ -240,9 +240,12 @@ h2 {
     border-radius: 50%;
     z-index: -1;
     opacity: 0.5;
+    box-shadow: 10px 10px 20px var(--color2);
 }
 
-
+.card {
+    box-shadow: 10px 10px 20px var(--color2);
+}
 
 .card-text {
     color: var(--color4);
@@ -251,9 +254,7 @@ h2 {
 
 .card img {
     height: 200px;
-    /* altura fixa para todas as imagens */
     object-fit: cover;
-    /* corta a imagem mantendo proporção */
 }
 
 .card .btn {
@@ -277,8 +278,95 @@ h2 {
 
 
 
+/* Ranking Page */
+.ranking-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 2rem auto;
+    text-align: center;
+}
 
+.foto-perfil img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: auto 0.5rem;
+}
 
+.titulo-ranking {
+    width: 80%;
+    background: linear-gradient(90deg, var(--color3), transparent);
+    padding: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border: 0.3rem solid var(--color3);
+    border-radius: 1rem;
+    justify-content: center;
+    color: var(--color1);
+    margin-bottom: 1.5rem;
+    box-shadow: 10px 10px 20px var(--color2);
+}
+
+.ranking-list .list-group-item {
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color1);
+    box-shadow: 3px 3px 20px var(--color2);
+}
+
+.ranking-list .list-group-item:first-child {
+    background: linear-gradient(90deg, transparent, var(--color3));
+    font-weight: bold;
+}
+
+.ranking-list .list-group-item:nth-child(2) {
+    background: linear-gradient(90deg, transparent, var(--color3));
+    font-weight: bold;
+}
+
+.ranking-list .list-group-item:nth-child(3) {
+    background: linear-gradient(90deg, transparent, var(--color3));
+    font-weight: bold;
+}
+
+.ranking-list .list-group-item {
+    background: linear-gradient(90deg, transparent, var(--color5));
+}
+
+.ranking-list .list-group-item:first-child i {
+    color: gold;
+}
+
+.ranking-list .list-group-item:nth-child(2) i {
+    color: silver;
+}
+
+.ranking-list .list-group-item:nth-child(3) i {
+    color: #b87333;
+} 
+
+.ranking-list .list-group-item:first-child .badge {
+    background-color: gold;
+    color: var(--color2);
+}
+
+.ranking-list .list-group-item:nth-child(2) .badge {
+    background-color: silver;
+    color: var(--color2);
+}
+
+.ranking-list .list-group-item:nth-child(3) .badge {
+    background-color: #b87333;
+
+}
+
+.fa-medal {
+    color: var(--color3);
+}
 
 
 /* QUERIES */

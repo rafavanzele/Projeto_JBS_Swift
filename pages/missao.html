@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Perfil</title>
+    <title>Missão</title>
     <!-- FAVICON -->
     <link rel="shortcut icon" href="../img/favicon-32x32.png" type="image/x-icon">
     <!-- Icones -->
@@ -24,56 +24,56 @@
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 
-
 <body>
+    <!-- Main -->
+    <main>
+        <div id="missao">
+            <!-- icone voltar -->
+            <span class="btn-voltar"><i class="fa-solid fa-angle-left"></i></span>
 
-    <!-- Info perfil -->
-    <div class="info-perfil">
-        <!-- icone voltar -->
-        <span class="btn-voltar"><i class="fa-solid fa-angle-left"></i></span>
-
-        <!-- Foto de perfil -->
-        <div class="perfil-foto">
-            <img src="../img/img_perfil.png" alt="foto de perfil">
+            <!-- Titulo e elipse da pagina -->
+            <h2 class="titulo-elipse">Missões do dia:</h2>
         </div>
 
-        <!-- Nome -->
-        <div class="perfil-nome">
-            <p>Maria Silva</p>
+
+        <!-- Cards missões -->
+        <div class="missao-container">
+
+            <div class="row row-cols-1 row-cols-md-2 g-3">
+
+                <!-- Card 1 -->
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fa-solid fa-clipboard-check text-warning"></i>Missão 1</h5>
+                            <p class="card-text">Limpar e organizar minha área de trabalho.</p>
+                            <span class="badge bg-success">+200 pts</span>
+                            <button class="btn btn-outline-primary btn-sm float-end">Concluir</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fa-solid fa-people-group text-info"></i> Reunião de Equipe
+                            </h5>
+                            <p class="card-text">Participar da reunião de alinhamento semanal.</p>
+                            <span class="badge bg-success">+100 pts</span>
+                            <button class="btn btn-outline-primary btn-sm float-end">Concluir</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
-    </div>
+    </main>
 
 
-    <!-- Tabela -->
-    <div class="table-container">
-        <table class="table-striped text-center custom-table">
 
-            <tbody>
-                <tr>
-                    <td>Registro</td>
-                    <td>123456</td>
-                </tr>
-                <tr>
-                    <td>Cargo</td>
-                    <td>Repositor(a)</td>
-                </tr>
-                <tr>
-                    <td>Unidade</td>
-                    <td>Santo André</td>
-                </tr>
-                <tr>
-                    <td>Nível</td>
-                    <td>Mestre</td>
-                </tr>
-                <tr>
-                    <td>Medalhas</td>
-                    <td>15</td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
 
 
     <!-- Rodapé -->
@@ -91,11 +91,9 @@
 
 
 
-
-    <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-        </script>
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

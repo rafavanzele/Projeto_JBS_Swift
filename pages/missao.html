@@ -25,48 +25,52 @@
 </head>
 
 <body>
-    <!-- Main -->
-    <main>
-        <div id="missao">
-            <!-- icone voltar -->
-            <span class="btn-voltar"><i class="fa-solid fa-angle-left"></i></span>
 
-            <!-- Titulo e elipse da pagina -->
-            <h2 class="titulo-elipse">Missões do dia:</h2>
+    <!-- Main -->
+    <main class="missao">
+
+        <div class="missao-head">
+            <!-- Titulo da pagina -->
+            <h2 class="titulo">Missões do dia:</h2>
+            <img src="../img/auto_falante.png" alt="imagem autofalante">
         </div>
 
+        <!-- icone voltar -->
+        <span class="btn-voltar"><i class="fa-solid fa-angle-left"></i></span>
 
         <!-- Cards missões -->
         <div class="missao-container">
 
-            <div class="row row-cols-1 row-cols-md-2 g-3">
-
-                <!-- Card 1 -->
-                <div class="col">
-                    <div class="card shadow-sm h-100">
+            <div class="row">
+                <!-- Missao 1 -->
+                <div class="col-md-6 col-lg-12 my-3">
+                    <div class="card-missao h-100">
                         <div class="card-body">
-                            <h5 class="card-title"><i class="fa-solid fa-clipboard-check text-warning"></i>Missão 1</h5>
+                            <h5 class="card-title p-2"><i class="fa-solid fa-thumbtack mx-2"></i> Missão 1 <span
+                                    class="badge mx-2">+200 pts</span></h5>
                             <p class="card-text">Limpar e organizar minha área de trabalho.</p>
-                            <span class="badge bg-success">+200 pts</span>
-                            <button class="btn btn-outline-primary btn-sm float-end">Concluir</button>
+                            <button class="btn float-end">Concluido</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="col">
-                    <div class="card shadow-sm h-100">
+
+                <!-- Missao 2 -->
+                <div class="col-md-6 col-lg-12 my-3">
+                    <div class="card-missao h-100">
                         <div class="card-body">
-                            <h5 class="card-title"><i class="fa-solid fa-people-group text-info"></i> Reunião de Equipe
-                            </h5>
-                            <p class="card-text">Participar da reunião de alinhamento semanal.</p>
-                            <span class="badge bg-success">+100 pts</span>
-                            <button class="btn btn-outline-primary btn-sm float-end">Concluir</button>
+                            <h5 class="card-title p-2"><i class="fa-solid fa-thumbtack mx-2"></i> Missão 2 <span
+                                    class="badge mx-2">+400 pts</span></h5>
+                            <p class="card-text">Atender 15 clientes.</p>
+                            <button class="btn float-end">Concluido</button>
                         </div>
                     </div>
                 </div>
 
-            </div>
+
+
+
+        </div>
 
         </div>
 

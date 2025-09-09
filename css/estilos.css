@@ -32,6 +32,8 @@ body {
 
 main #login {
     width: 90%;
+    overflow-y: hidden;
+    overflow-x: hidden;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -72,7 +74,7 @@ section#login input::placeholder {
     color: var(--color1);
     cursor: pointer;
     border-radius: 2rem;
-    box-shadow: 2px 2px 10px var(--color2);
+    box-shadow: 3px 3px 10px var(--color2);
 }
 
 .btn:hover {
@@ -125,7 +127,7 @@ a {
     width: 10rem;
     height: 2.5rem;
     display: flex;
-    margin: auto;
+    margin: 0 auto 0.5rem auto;
     font-size: 3rem;
     font-weight: bold;
     justify-content: center;
@@ -140,7 +142,7 @@ a {
     height: 50%;
     display: flex;
     justify-content: center;
-    margin: auto;
+    margin: auto auto 2rem auto;
 
 }
 
@@ -202,7 +204,7 @@ a {
 }
 
 .footer span:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 
@@ -283,7 +285,7 @@ h2 {
 .ranking-container {
     width: 90%;
     max-width: 500px;
-    margin: 2rem auto;
+    margin: 2rem auto 3rem auto;
     text-align: center;
 }
 
@@ -303,18 +305,18 @@ h2 {
     font-weight: bold;
     border: 0.3rem solid var(--color3);
     border-radius: 1rem;
-    justify-content: center;
     color: var(--color1);
-    margin-bottom: 1.5rem;
+    margin: 0 auto 1.5rem auto;
     box-shadow: 10px 10px 20px var(--color2);
 }
 
 .ranking-list .list-group-item {
     font-size: 1.1rem;
+    height: 60px;
     border: none;
     border-radius: 0.5rem;
-    margin-bottom: 0.5rem;
-    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 0.8rem;
+    background: linear-gradient(90deg, transparent, var(--color5));
     color: var(--color1);
     box-shadow: 3px 3px 20px var(--color2);
 }
@@ -334,9 +336,6 @@ h2 {
     font-weight: bold;
 }
 
-.ranking-list .list-group-item {
-    background: linear-gradient(90deg, transparent, var(--color5));
-}
 
 .ranking-list .list-group-item:first-child i {
     color: gold;
@@ -372,7 +371,7 @@ h2 {
 
 
 /* MISSÃO PAGE */
-main {
+.missao-container {
     overflow-x: hidden;
 }
 
@@ -381,7 +380,7 @@ main {
     align-items: center;          
     justify-content: center;      
     margin: 4rem auto 2rem auto;
-    width: 75%;
+    width: 70%;
 }
 
 .missao-head img {
@@ -408,7 +407,6 @@ main {
     margin: 0 auto;
     padding: 1rem;
     background-color: var(--color5);
-    opacity: 0.8;
     border-radius: 1rem;
     box-shadow: 2px 2px 10px var(--color2);
 }
@@ -439,6 +437,117 @@ main {
     margin-bottom: 1rem;
 }
 
+.medalha img {
+    display: flex;
+    width: 90px;
+    height: 80px;
+    margin: 0 auto 1rem auto;
+    padding: 0;
+}
+
+.medalha .btn {
+    max-width: 150px;
+    justify-content: center;
+}
+
+
+
+
+/* GAME */
+#info-perfil {
+    width: 100%;
+    margin-top: 1rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#perfil-foto img {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 35px;
+    left: 25%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 3px solid var(--color3);
+    box-shadow: 1px 1px 10px var(--color2);
+}
+
+#info-perfil #perfil-nome {
+    width: 5.5rem;
+    height: 2rem;
+    margin-top: 6.5rem;
+    margin-left: 3rem;
+    display: flex;
+    font-size: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color3);
+    border-radius: 2rem;
+    box-shadow: 1px 1px 10px var(--color2);
+}
+
+.mapa-game {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.caminho {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .etapa {
+    position: relative;
+  }
+  .etapa img {
+    width: 100px;
+  }
+  .etapa .numero {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color3);
+    color: var(--color1);
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .caminho .etapa:nth-child(even) {
+    align-self: flex-start;
+    margin-left: 3rem;
+  }
+  .caminho .etapa:nth-child(odd) {
+    align-self: flex-end;
+    margin-right: 3rem;
+  }
+
+  .caminho-game {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .caminho-game i {
+    color: var(--color2); /* ou rosa/vermelho */
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  
+
+
+
+
+
 
 
 /* QUERIES */
@@ -459,5 +568,9 @@ main {
 
     .missao-head img {
         left: 350px;
+    }
+
+    .missao-head {
+        max-width: 45%;
     }
 }

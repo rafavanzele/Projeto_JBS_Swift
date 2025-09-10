@@ -376,9 +376,9 @@ h2 {
 }
 
 .missao-head {
-    display: flex;                
-    align-items: center;          
-    justify-content: center;      
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 4rem auto 2rem auto;
     width: 70%;
 }
@@ -392,7 +392,7 @@ h2 {
 }
 
 .missao-head .titulo {
-    margin: 0 auto ;
+    margin: 0 auto;
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--color1);
@@ -491,25 +491,28 @@ h2 {
 
 .mapa-game {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 }
 
 .caminho {
-    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
-  }
-  
-  .etapa {
+    gap: 1.5rem;
+}
+
+.caminho figure.etapa {
     position: relative;
-  }
-  .etapa img {
+    text-align: center;
+}
+
+.caminho figure.etapa img {
     width: 100px;
-  }
-  .etapa .numero {
+
+}
+
+.caminho figure.etapa .numero {
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -518,31 +521,47 @@ h2 {
     color: var(--color1);
     font-weight: bold;
     border-radius: 50%;
-    padding: 0.3rem 0.6rem;
-  }
-  
-  .caminho .etapa:nth-child(even) {
-    align-self: flex-start;
-    margin-left: 3rem;
-  }
-  .caminho .etapa:nth-child(odd) {
+    padding: 0.2rem 0.6rem;
+}
+
+.caminho .caminho-game {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.caminho .caminho-game i {
+    color: var(--color3);
+    font-size: 1rem;
+    margin: 0.2rem;
+    padding: 0.1rem;    
+}
+
+/* Carrinho zig-zag */
+.caminho figure.etapa:nth-of-type(odd) {
     align-self: flex-end;
     margin-right: 3rem;
-  }
+    text-align: left;
+}
 
-  .caminho-game {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-  
-  .caminho-game i {
-    color: var(--color2); /* ou rosa/vermelho */
-    font-size: 1rem;
-    opacity: 0.9;
-  }
-  
+.caminho figure.etapa:nth-of-type(even) {
+    align-self: flex-start;
+    margin-left: 3rem;
+    text-align: right;
+}
+
+/* Zig-zag corações */
+.caminho .caminho-game:nth-of-type(odd) {
+    align-self: center;
+    /* margin-left: 10rem; */
+    transform: rotate(30deg);
+}
+
+.caminho .caminho-game:nth-of-type(even) {
+    align-self: center;
+    /* margin-right: 6rem; */
+    transform: rotate(-30deg);
+}
 
 
 
@@ -572,5 +591,32 @@ h2 {
 
     .missao-head {
         max-width: 45%;
+    }
+
+    #info-perfil #perfil-nome {
+        width: 100px;
+        margin-left: 250px;
+        margin-top: 8.3rem;
+    }
+
+    #perfil-foto img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .caminho figure.etapa img {
+        width: 150px;
+    }
+
+    .caminho figure.etapa:nth-of-type(odd) {
+        margin-right: 35%;
+    }
+
+    .caminho figure.etapa:nth-of-type(even) {
+        margin-left: 35%;
+    }
+
+    .caminho .caminho-game i {
+        font-size: 20px;
     }
 }

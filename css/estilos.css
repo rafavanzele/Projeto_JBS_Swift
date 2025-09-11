@@ -189,6 +189,7 @@ a {
     display: flex;
     position: relative;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .footer i, .footer p {
@@ -199,16 +200,10 @@ a {
 }
 
 .footer i {
-    margin-left: 0.7rem;
+    margin-left: 0.8rem;
 }
 
-/* .footer span i, span p {
-    font-size: 1rem;
-    justify-content: space-between;
-    text-align: center;
-} */
-
-.footer span:hover {
+.footer a:hover {
     transform: scale(1.1);
 }
 
@@ -499,15 +494,18 @@ h2 {
 
 .mapa-game {
     width: 100%;
+    margin: 0 1rem 0 1rem;
     min-height: 100vh;
     position: relative;
+    background-color: #0000003f;
+    border-radius: 2rem;
 }
 
 .caminho {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.5rem;   
 }
 
 .caminho figure.etapa {
@@ -530,6 +528,10 @@ h2 {
     font-weight: bold;
     border-radius: 50%;
     padding: 0.2rem 0.6rem;
+}
+
+.caminho figure.etapa .numero .ativo {
+    border: 1px solid var(--color1);
 }
 
 .caminho .caminho-game {
@@ -593,6 +595,10 @@ h2 {
         opacity: 1;
     }
 
+    .missao-container {
+        width: 700px;
+    }
+
     .missao-head img {
         left: 380px;
     }
@@ -601,9 +607,18 @@ h2 {
         max-width: 45%;
     }
 
+    .table-container {
+        width: 50%;
+    }
+
+    .mapa-game {
+        margin-top: 0.5rem;
+        width: 60%;
+    }
+
     #info-perfil #perfil-nome {
         width: 100px;
-        margin-left: 250px;
+        margin-left: 225px;
         margin-top: 8.3rem;
     }
 

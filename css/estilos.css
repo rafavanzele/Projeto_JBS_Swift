@@ -519,13 +519,13 @@ h2 {
     transition: opacity .4s ease, transform .4s ease;
     text-align: center;
     margin-top: 2rem;
-  }
-  
-  .medalha.show {
+}
+
+.medalha.show {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
-  }
+}
 
 
 /* GAME */
@@ -580,17 +580,31 @@ h2 {
     gap: 1.5rem;
 }
 
-.caminho figure.etapa {
+.etapa {
     position: relative;
     text-align: center;
 }
 
-.caminho figure.etapa img {
+
+
+.etapa.ativo {
+    border: 2px solid var(--color3);
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 0 15px var(--color3);
+}
+
+.etapa {
+    position: relative;
+    text-align: center;
+}
+
+.etapa img {
     width: 100px;
 
 }
 
-.caminho figure.etapa .numero {
+.etapa .numero {
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -606,13 +620,13 @@ h2 {
     border: 3px solid var(--color1);
 }
 
-.caminho .caminho-game {
+.caminho-game {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
 }
 
-.caminho .caminho-game i {
+.caminho-game i {
     color: var(--color3);
     font-size: 1rem;
     margin: 0.2rem;
@@ -690,7 +704,7 @@ h2 {
 
     #info-perfil #perfil-nome {
         width: 100px;
-        margin-left: 225px;
+        margin-left: 220px;
         margin-top: 8.3rem;
     }
 
@@ -704,11 +718,11 @@ h2 {
     }
 
     .caminho figure.etapa:nth-of-type(odd) {
-        margin-right: 35%;
+        margin-right: 30%;
     }
 
     .caminho figure.etapa:nth-of-type(even) {
-        margin-left: 35%;
+        margin-left: 30%;
     }
 
     .caminho .caminho-game i {

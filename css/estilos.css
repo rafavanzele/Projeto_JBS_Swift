@@ -527,6 +527,28 @@ h2 {
     pointer-events: auto;
 }
 
+.btn-pegar {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--color3);
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 0 10px var(--color3);
+    transition: transform 0.2s ease-in-out;
+    animation: pulse 1.5s infinite;
+}
+
+.btn-pegar:hover {
+    transform: scale(1);
+    background-color: #a13202;
+}
+
 
 /* GAME */
 #info-perfil {
@@ -760,16 +782,33 @@ h2 {
 /* Animação deslizar-ranking-page */
 @keyframes aparecer {
     0% {
-      transform: translateX(-100px);
-      opacity: 0;
+        transform: translateX(-100px);
+        opacity: 0;
     }
+
     100% {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
-  }
-  
-  .ranking-list .list-group-item {
+}
+
+.ranking-list .list-group-item {
     opacity: 0;
     animation: aparecer 0.6s ease-out forwards;
-  }
+}
+
+
+/* Efeito pulsar botao medalha */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px var(--color3), 0 0 10px var(--color3);
+    }
+
+    50% {
+        box-shadow: 0 0 15px var(--color3), 0 0 30px var(--color3);
+    }
+
+    100% {
+        box-shadow: 0 0 5px var(--color3), 0 0 10px var(--color3);
+    }
+}

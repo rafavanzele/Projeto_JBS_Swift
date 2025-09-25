@@ -52,15 +52,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         });
-        /*
-        // ação do botão "Pegar medalha" (opcional)
+
+        //Pegar medalha
         const btnPegar = document.querySelector(".medalha .btn-pegar");
         if (btnPegar) {
             btnPegar.addEventListener("click", () => {
+                //pega medalha e soma no storage
+                let qtd = parseInt(localStorage.getItem("medalhas")) || 0;
+                qtd++;
+                localStorage.setItem("medalhas", qtd);
+
+                //apos pegar a medalha, dispara uma msg de aviso
                 alert("Medalha adicionada ao seu perfil! 🏅");
+
+                //depois que a medalha é apanhada, volta a ficar invisivel
+                medalha.classList.remove("show");
             });
         }
-        */
+
     }
 
 
@@ -149,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //PROFILE PAGE
     if (document.getElementById("nivel-colaborador")) {
-        
+
         //pegando o <td> do html-perfil
         const nivelTd = document.getElementById("nivel-colaborador");
         if (!nivelTd) return;
@@ -170,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const inicio = new Date(dataInicio);
 
         // Dias que passaram desde o início
-        const diffDias = Math.floor((hoje - inicio) / (1000 * 60 * 60 *24));
+        const diffDias = Math.floor((hoje - inicio) / (1000 * 60 * 60 * 24));
 
         // Define o índice do nível (um nível a cada 30 dias)
         let indiceNivel = Math.floor(diffDias / 30);
@@ -182,6 +191,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Atualiza o td com o nível correto
         nivelTd.textContent = niveis[indiceNivel];
+
+        //atualizando qtd medalhas no perfil
+        if (document.getElementById("qtd-medalhas")) {
+            const medalhasTd = document.getElementById("qtd-medalhas");
+            const qtd = parseInt(localStorage.getItem("medalhas")) || 0;
+            medalhasTd.textContent = qtd;
+        }
     }
 });
 

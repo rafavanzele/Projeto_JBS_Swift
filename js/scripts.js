@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
         //ordenando por pontuação (maior para menor)
         colaboradores.sort((a, b) => b.pontos - a.pontos);
 
-        
+
         //criando cada li do ranking dinamicamente
         colaboradores.forEach((colab, index) => {
             const li = document.createElement("li");
@@ -144,6 +144,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
             rankingList.appendChild(li);
         });
+    }
+
+
+    //PROFILE PAGE
+    if (document.getElementById("nivel-colaborador")) {
+        
+        //pegando o <td> do html-perfil
+        const nivelTd = document.getElementById("nivel-colaborador");
+        if (!nivelTd) return;
+
+        //array com os niveis
+        const niveis = ["Iniciante", "Pro", "Especialista", "Mestre"];
+
+        // Recupera a data inicial do localStorage
+        let dataInicio = localStorage.getItem("dataInicioNivel");
+
+        // Se ainda não existir data inicial, cria e salva
+        if (!dataInicio) {
+            dataInicio = new Date().toISOString();
+            localStorage.setItem("dataInicioNivel", dataInicio);
+        }
+
+        const hoje = new Date();
+        const inicio = new Date(dataInicio);
+
+        // Dias que passaram desde o início
+        const diffDias = Math.floor((hoje - inicio) / (1000 * 60 * 60 *24));
+
+        // Define o índice do nível (um nível a cada 30 dias)
+        let indiceNivel = Math.floor(diffDias / 30);
+
+        // Não deixa passar do último nível
+        if (indiceNivel >= niveis.length) {
+            indiceNivel = niveis.length - 1;
+        }
+
+        // Atualiza o td com o nível correto
+        nivelTd.textContent = niveis[indiceNivel];
     }
 });
 

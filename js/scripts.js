@@ -101,6 +101,50 @@ document.addEventListener("DOMContentLoaded", () => {
             etapa.classList.toggle("ativo", index + 1 === posicaoAtual);
         })
     }
+
+
+
+    //RANKING PAGE
+    //array com colaboradores
+    if (document.querySelector(".ranking-list")) {
+        const colaboradores = [
+            { nome: "Maria Silva", pontos: 1500, foto: "../img/img_perfil.png" },
+            { nome: "João Luiz", pontos: 1350, foto: "../img/img_perfil02.png" },
+            { nome: "Sonia Castelo", pontos: 1200, foto: "../img/img_perfil04.png" },
+            { nome: "Jeruza Góes", pontos: 1100, foto: "../img/img_perfil03.png" },
+            { nome: "Ariel Gonzaga", pontos: 950, foto: "../img/img_perfil05.png" }
+        ];
+
+        const rankingList = document.querySelector(".ranking-list");
+
+
+        //ordenando por pontuação (maior para menor)
+        colaboradores.sort((a, b) => b.pontos - a.pontos);
+
+        
+        //criando cada li do ranking dinamicamente
+        colaboradores.forEach((colab, index) => {
+            const li = document.createElement("li");
+            li.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
+
+            // ícone do pódio (ouro, prata, bronze)
+            let icone = '<i class="fa-solid fa-medal"></i>';
+            if (index === 0) icone = '<i class="fa-solid fa-trophy" style="color: gold;"></i>';
+            else if (index === 1) icone = '<i class="fa-solid fa-trophy" style="color: silver;"></i>';
+            else if (index === 2) icone = '<i class="fa-solid fa-trophy" style="color: #cd7f32;"></i>';
+
+            // montando cada item (medalha, foto, posicao, nome)
+            li.innerHTML = `
+              <span>${icone} <span class="foto-perfil"><img src="${colab.foto}" alt="perfil"></span>${index + 1}º - ${colab.nome}</span>
+              <span class="badge">${colab.pontos} pts</span>
+            `;
+
+            // aplicando o efeito derrapagem dinamicamente em cada li
+            li.style.animationDelay = `${index * 0.2}s`;
+
+            rankingList.appendChild(li);
+        });
+    }
 });
 
 

@@ -1,4 +1,4 @@
-
+//garante que o html vai ser carregado primeiro:
 document.addEventListener("DOMContentLoaded", () => {
     // PAGE HOME-MISSOES
     if (document.querySelector(".missao-container")) {

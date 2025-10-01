@@ -211,7 +211,7 @@ a {
 /* FOOTER */
 .footer {
     margin-top: 2rem;
-    width: 80%;
+    width: 90%;
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -221,7 +221,7 @@ a {
 .footer i,
 .footer p {
     color: var(--color1);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     justify-content: space-between;
     align-items: center;
 }

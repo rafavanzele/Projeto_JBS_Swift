@@ -117,11 +117,11 @@ document.addEventListener("DOMContentLoaded", () => {
     //array com colaboradores
     if (document.querySelector(".ranking-list")) {
         const colaboradores = [
-            { nome: "Maria Silva", pontos: 1500, foto: "../img/img_perfil.png" },
-            { nome: "João Luiz", pontos: 1350, foto: "../img/img_perfil02.png" },
-            { nome: "Sonia Castelo", pontos: 1200, foto: "../img/img_perfil04.png" },
-            { nome: "Jeruza Góes", pontos: 1100, foto: "../img/img_perfil03.png" },
-            { nome: "Ariel Gonzaga", pontos: 950, foto: "../img/img_perfil05.png" }
+            { nome: "Maria Silva", pontos: 500, foto: "../img/img_perfil.png" },
+            { nome: "João Luiz", pontos: 350, foto: "../img/img_perfil02.png" },
+            { nome: "Sonia Castelo", pontos: 350, foto: "../img/img_perfil04.png" },
+            { nome: "Jeruza Góes", pontos: 150, foto: "../img/img_perfil03.png" },
+            { nome: "Ariel Gonzaga", pontos: 150, foto: "../img/img_perfil05.png" }
         ];
 
         const rankingList = document.querySelector(".ranking-list");
